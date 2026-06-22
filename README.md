@@ -100,8 +100,11 @@ what happens next. The interrupt/resume pattern in `main.py` is the actual mecha
 
 ## Related projects
 
+## Related projects
+
 - [multi-tool-agent](https://github.com/Honaxen/multi-tool-agent) — single-loop ReAct agent
 - [rag-system-from-scratch](https://github.com/Honaxen/rag-system-from-scratch) — RAG pipeline
+- [rag-evaluation-framework](https://github.com/Honaxen/rag-evaluation-framework) — evaluate any RAG pipeline
 
 ---
 
