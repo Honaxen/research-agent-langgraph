@@ -118,13 +118,11 @@ def _quality_check(state: ResearchState) -> str:
 def human_approval_node(state: ResearchState) -> dict:
     """
     Present the summary and pause for human input.
-    In the CLI/Gradio layer, this is where execution pauses
-    and resumes once the user responds.
+    LangGraph requires at least one field written per node,
+    so we set is_sufficient=True to signal research is done.
+    The CLI layer reads state["summary"] and asks the human.
     """
-    # This node itself does no I/O — the interface layer (CLI/Gradio)
-    # reads state["summary"], asks the human, then re-invokes the graph
-    # with human_approved set. See main.py for the interrupt pattern.
-    return {}
+    return {"is_sufficient": True}
 
 
 def _approval_router(state: ResearchState) -> str:
